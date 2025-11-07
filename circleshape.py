@@ -25,4 +25,4 @@ class CircleShape(pygame.sprite.Sprite):
         if not isinstance(circleshape, CircleShape):
             raise Exception("Colision not implemented")
         distance = self.position.distance_to(circleshape.position)
-        return self.radius + circleshape.radius <= distance
+        return distance <= self.radius + circleshape.radius
